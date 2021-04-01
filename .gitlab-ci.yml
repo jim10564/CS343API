@@ -16,16 +16,16 @@ before_script:
 test:
   stage: test
   script:
-    - bin/build
-    - bin/validate
+    - bin/dev/build
+    - bin/dev/validate
 
 release:
   stage: release
   rules:
     - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
   script:
-    - bin/build
-    - bin/bundle > items-api.yaml
+    - bin/dev/build
+    - bin/dev/bundle > items-api.yaml
   artifacts:
     paths:
       - items-api.yaml
