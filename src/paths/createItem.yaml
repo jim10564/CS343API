@@ -1,4 +1,4 @@
-description: Create a new item.
+description: Create item
 requestBody:
   content:
     application/json:

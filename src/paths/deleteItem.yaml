@@ -1,4 +1,4 @@
-description: View item
+description: Delete item
 parameters:
   - name: id
     in: path
@@ -7,7 +7,7 @@ parameters:
       $ref: "../index.yaml#/components/schemas/MongoId"
 responses:
   "200":
-    description: Item found and returned
+    description: Item updated
     content:
       application/json:
         schema:

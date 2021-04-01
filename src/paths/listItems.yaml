@@ -1,4 +1,4 @@
-description: Get list of items.
+description: List items
 responses:
   "200":
     description: OK

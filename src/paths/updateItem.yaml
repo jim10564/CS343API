@@ -1,13 +1,29 @@
-description: View item
+description: Update item
 parameters:
   - name: id
     in: path
     required: true
     schema:
       $ref: "../index.yaml#/components/schemas/MongoId"
+requestBody:
+  required: true
+  content:
+    application/json:
+      examples:
+        soup:
+          value:
+            name: Soup
+        tuna:
+          value:
+            name: Tuna
+        bread:
+          value:
+            name: Bread
+      schema:
+        $ref: "../index.yaml#/components/schemas/ItemData"
 responses:
   "200":
-    description: Item found and returned
+    description: Item updated
     content:
       application/json:
         schema:

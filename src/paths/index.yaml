@@ -6,3 +6,7 @@
 /items/{id}:
   get:
     $ref: "./viewItem.yaml"
+  put:
+    $ref: "./updateItem.yaml"
+  delete:
+    $ref: "./deleteItem.yaml"
