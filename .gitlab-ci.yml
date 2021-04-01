@@ -1,0 +1,31 @@
+image: docker:19.03.12
+services:
+  - docker:19.03.12-dind
+
+stages:
+  - test
+  - release
+
+variables:
+  CONTAINER_TEST_IMAGE: $CI_REGISTRY_IMAGE:$CI_COMMIT_REF_SLUG
+  CONTAINER_RELEASE_IMAGE: $CI_REGISTRY_IMAGE:latest
+
+before_script:
+  - apk add bash
+
+test:
+  stage: test
+  script:
+    - bin/build
+    - bin/validate
+
+release:
+  stage: release
+  rules:
+    - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
+  script:
+    - bin/build
+    - bin/bundle > items-api.yaml
+  artifacts:
+    paths:
+      - items-api.yaml
