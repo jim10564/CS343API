@@ -1,9 +1,7 @@
 openapi: 3.0.3
 info:
   title: ManageItems
-  version: 0.1.0
-servers:
-  $ref: "./servers/index.yaml"
+  version: 0.1.1
 paths:
   $ref: "./paths/index.yaml"
 components:
