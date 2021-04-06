@@ -6,12 +6,8 @@ parameters:
     schema:
       $ref: "../index.yaml#/components/schemas/MongoId"
 responses:
-  "200":
-    description: Item updated
-    content:
-      application/json:
-        schema:
-          $ref: "../index.yaml#/components/schemas/Item"
+  "204":
+    description: Item deleted
   "400":
     $ref: "../index.yaml#/components/responses/BadRequest"
   "404":
