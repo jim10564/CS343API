@@ -1,10 +1,4 @@
 description: View item
-parameters:
-  - name: id
-    in: path
-    required: true
-    schema:
-      $ref: "../index.yaml#/components/schemas/MongoId"
 responses:
   "200":
     description: Item found and returned

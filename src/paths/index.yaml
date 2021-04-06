@@ -4,6 +4,12 @@
   post:
     $ref: "./createItem.yaml"
 /items/{id}:
+  parameters:
+    - name: id
+      in: path
+      required: true
+      schema:
+        $ref: "../index.yaml#/components/schemas/MongoId"
   get:
     $ref: "./viewItem.yaml"
   put:
