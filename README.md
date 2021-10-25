@@ -8,20 +8,14 @@ The entry point of the specification is in `src/index.yaml`
 
 ## 2. Tools
 
-### 2.1. Build tools
+### 2.1. Validate specification
 
 ```
-bin/dev/build
+swagger-cli validate src/index.yaml
 ```
 
-### 2.2. Validate specification
+### 2.2. Bundle specification into a single file
 
 ```
-bin/dev/validate
-```
-
-### 2.3. Bundle specification into a single file
-
-```
-bin/dev/bundle --outfile items-api.yaml
+swagger-cli bundle --outfile items-api.yaml src/index.yaml
 ```
