@@ -6,10 +6,10 @@ stages:
   - test
 
 before_script:
-  - apk add bash
+  - apk add npm
+  - npm install -g @apidevtools/swagger-cli
 
 test:
   stage: test
   script:
-    - bin/build
-    - bin/validate
+    - swagger-cli validate src/index.html
