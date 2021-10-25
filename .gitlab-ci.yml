@@ -12,4 +12,4 @@ before_script:
 test:
   stage: test
   script:
-    - swagger-cli validate src/index.html
+    - swagger-cli validate src/index.yaml
