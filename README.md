@@ -1,21 +1,43 @@
 # Items API
 
 This is an OpenAPI specification of the Items API.
-
-## 1. OpenAPI Specification
-
 The entry point of the specification is in `src/index.yaml`
+Versioned bundles are available in `bundles/`
 
-## 2. Tools
+## 1. Developer Guide
 
-### 2.1. Validate specification
+### 1.1 Install development environment
+
+To avoid dependency conflicts across projects, and to reduce variance
+between development platforms, we use VS Code devcontainers.
+
+New to VS Code devcontainers? Start here
+https://code.visualstudio.com/docs/remote/containers 
+and follow its installation instructions. Be sure to install and
+configure Git too.
+
+Now download, install, and run this project and its devcontainer as
+follows.
+
+1. Navigate to this project on GitLab and select
+    `Clone -> Open in your IDE -> Visual Studio Code (HTTPS)`.
+2. Select location to store the project.
+3. Select "Reopen in container" when option is provided.
+
+### 1.2. Validate specification
 
 ```
-swagger-cli validate src/index.yaml
+npm run validate
 ```
 
-### 2.2. Bundle specification into a single file
+### 1.3. Bundle specification into a single file
 
 ```
-swagger-cli bundle --outfile items-api.yaml src/index.yaml
+npm run bundle outfile.yaml
+```
+
+For example, when creating a release 0.2.3 ...
+
+```
+npm run bundle bundles/items-api.0.2.3.yaml
 ```
