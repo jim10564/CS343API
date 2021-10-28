@@ -7,9 +7,9 @@ stages:
 
 before_script:
   - apk add npm
-  - npm install -g @apidevtools/swagger-cli
+  - npm install
 
 test:
   stage: test
   script:
-    - swagger-cli validate src/index.yaml
+    - npm run validate
