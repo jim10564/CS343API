@@ -36,8 +36,8 @@ npm run validate
 npm run bundle outfile.yaml
 ```
 
-For example, when creating a release 0.2.3 ...
+For example, when creating a release 0.2.4 ...
 
 ```
-npm run bundle bundles/items-api.0.2.3.yaml
+npm run bundle bundles/items-api.0.2.4.yaml
 ```
