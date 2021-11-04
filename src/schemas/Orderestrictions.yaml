@@ -1,0 +1,7 @@
+description: Customer food restrictions
+example: Peanut Allergy
+maxLength: 128
+minLength: 1
+nullable: true
+pattern: \S+
+type: string

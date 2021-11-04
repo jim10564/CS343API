@@ -52,6 +52,30 @@ paths:
           $ref: '#/components/responses/BadRequest'
         '500':
           $ref: '#/components/responses/ServerError'
+  '/items/{name}':
+    parameters:
+      - name: name
+        in: path
+        required: true
+        schema:
+        $ref: '#/components/schemas/ItemName'
+
+    get:
+      description: View item
+      responses:
+        '200':
+          description: Item found and returned
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Item'
+        '400':
+          $ref: '#/components/responses/BadRequest'
+        '404':
+          $ref: '#/components/responses/NotFound'
+        '500':
+          $ref: '#/components/responses/ServerError'
+    
   '/items/{id}':
     parameters:
       - name: id
@@ -116,6 +140,8 @@ paths:
           $ref: '#/components/responses/NotFound'
         '500':
           $ref: '#/components/responses/ServerError'
+
+
 components:
   responses:
     BadRequest:

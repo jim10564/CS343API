@@ -1,0 +1,7 @@
+description: Customer Order Preferences
+example: "Pineapple, Froot Loops"
+maxLength: 128
+minLength: 1
+nullable: true
+pattern: \S+
+type: string

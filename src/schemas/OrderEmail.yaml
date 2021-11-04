@@ -1,0 +1,7 @@
+description: Customer Order email address
+example: jandrese@college.edu
+maxLength: 128
+minLength: 1
+nullable: false
+pattern: ^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$
+type: string

@@ -10,3 +10,11 @@ ItemName:
   $ref: ./ItemName.yaml
 MongoId:
   $ref: ./MongoId.yaml
+Order:
+  $ref: ./Order.yaml
+OrderEmail:
+  $ref: ./OrderEmail.yaml
+OrderRestrictions:
+  $ref: ./OrderRestrictions.yaml
+OrderPreferences:
+  $ref: ./OrderPreferences.yaml

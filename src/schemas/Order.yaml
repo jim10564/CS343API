@@ -1,0 +1,21 @@
+example: { "_id": "0123456789aBcDeF01234567","preferences": "Pineapple, Froot Loops","restrictions": "", "items": "Canned fruit, Cereal"
+}
+properties:
+  _id:
+    $ref: "../index.yaml#/components/schemas/MongoId"
+  preferences:
+    $ref: "../index.yaml#/components/schemas/OrderPreferences"
+  restrictions:
+    $ref: "../index.yaml#/components/schemas/OrderRestrictions"
+  items:
+    $ref: "../index.yaml#/components/schemas/ItemArray"
+  email:
+    $ref: "../index.yaml#/components/schemas/OrderEmail"
+
+required:
+  - _id
+  - items
+  - email
+type: object
+
+
